@@ -44,17 +44,11 @@ public class ImageAdapter extends BaseAdapter {
 			// View is not recycled
 			LayoutInflater inflater = ((Activity)context).getLayoutInflater();
 			view = inflater.inflate(R.layout.podcast_list_item, parent, false);
-			//view.setLayoutParams(new GridView.LayoutParams(85, 85));
-			//view.setScaleType(ImageView.ScaleType.CENTER_CROP);
-			//view.setPadding(8, 8, 8, 8);
 		} else {
 			view = (View) convertView;
 		}
 		
 		((TextView)view.findViewById(R.id.txtTitle)).setText(((Podcast)getItem(position)).getName());
-		//((ImageView)view.findViewById(R.id.imgLogo)).setImageResource(R.drawable.podcast_icon);
-		
-		//view.setImageResource(R.drawable.podcast_icon);
 		return view;
 	}
 
