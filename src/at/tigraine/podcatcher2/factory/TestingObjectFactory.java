@@ -6,9 +6,16 @@ import at.tigraine.podcatcher2.database.PodcastDatabase;
 
 public class TestingObjectFactory extends ObjectFactory {
 
+	private static PodcastDatabase database = null;
 	@Override
 	public PodcastDatabase createDatabase(Context context) {
-		return new FakePodcastDatabase(context);
+		if (database == null) {
+			synchronized(PodcastDatabase.class) {
+				if (database == null) {
+					database = new FakePodcastDatabase(context);
+				}
+			}
+		}
+		return database;
 	}
-
 }
