@@ -1,6 +1,8 @@
-package at.tigraine.podcatcher2;
+package at.tigraine.podcatcher2.database;
 
 import java.util.List;
+
+import at.tigraine.podcatcher2.models.Podcast;
 
 public interface PodcastDatabase {
 

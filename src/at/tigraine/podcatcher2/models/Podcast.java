@@ -1,4 +1,4 @@
-package at.tigraine.podcatcher2;
+package at.tigraine.podcatcher2.models;
 
 public class Podcast {
 	private String name;

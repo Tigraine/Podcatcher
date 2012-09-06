@@ -1,4 +1,4 @@
-<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/podcast_grid"
     android:layout_width="fill_parent"
@@ -9,4 +9,4 @@
     android:horizontalSpacing="10dp"
     android:stretchMode="columnWidth"
     android:gravity="center">
-</GridView>
+</ListView>

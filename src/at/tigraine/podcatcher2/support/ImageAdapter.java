@@ -1,4 +1,4 @@
-package at.tigraine.podcatcher2;
+package at.tigraine.podcatcher2.support;
 
 import java.util.List;
 
@@ -11,6 +11,10 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import at.tigraine.podcatcher2.R;
+import at.tigraine.podcatcher2.R.id;
+import at.tigraine.podcatcher2.R.layout;
+import at.tigraine.podcatcher2.models.Podcast;
 
 public class ImageAdapter extends BaseAdapter {
 	

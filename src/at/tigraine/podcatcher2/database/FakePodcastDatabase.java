@@ -1,8 +1,9 @@
-package at.tigraine.podcatcher2;
+package at.tigraine.podcatcher2.database;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import at.tigraine.podcatcher2.models.Podcast;
 
 
 

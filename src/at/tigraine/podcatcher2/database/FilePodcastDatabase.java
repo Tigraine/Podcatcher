@@ -1,4 +1,4 @@
-package at.tigraine.podcatcher2;
+package at.tigraine.podcatcher2.database;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -8,6 +8,7 @@ import java.util.List;
 
 import android.content.Context;
 import android.widget.Toast;
+import at.tigraine.podcatcher2.models.Podcast;
 
 public class FilePodcastDatabase implements PodcastDatabase {
 	Context context;
