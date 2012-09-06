@@ -1,5 +1,6 @@
 package at.tigraine.podcatcher2.support;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.mcsoxford.rss.RSSItem;
@@ -47,7 +48,7 @@ public class RSSItemAdapter extends BaseAdapter {
 		if (convertView == null) {
 			// View is not recycled
 			LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-			view = inflater.inflate(R.layout.podcast_list_item, parent, false);
+			view = inflater.inflate(R.layout.rss_list_item, parent, false);
 		} else {
 			view = (View) convertView;
 		}
@@ -59,7 +60,11 @@ public class RSSItemAdapter extends BaseAdapter {
 		Log.d(Constants.LOG_TAG, "Link: " + item.getLink());
 		Log.d(Constants.LOG_TAG, "PubDate: " + item.getPubDate());
 		
-		((TextView)view.findViewById(R.id.txtTitle)).setText(Html.fromHtml(item.getContent()));
+		((TextView)view.findViewById(R.id.rss_item_title)).setText(item.getTitle());
+		((TextView)view.findViewById(R.id.rss_item_description)).setText(Html.fromHtml(item.getDescription()));
+		SimpleDateFormat format = new SimpleDateFormat("kk:mm d.M.y");
+		String date = format.format(item.getPubDate());
+		((TextView)view.findViewById(R.id.rss_item_pubdate)).setText(date);
 		return view;
 	}
 
