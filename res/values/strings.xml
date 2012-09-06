@@ -7,4 +7,5 @@
     <string name="title_add_podcast">Subscribe to Podcast</string>
 	<string name="menu_add_podcast">Add Podcast</string>
 	<string name="done">Done</string>
+	<string name="image_of_podcast">Image of Podcast</string>
 </resources>

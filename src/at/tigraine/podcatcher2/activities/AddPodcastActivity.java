@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import at.tigraine.podcatcher2.Constants;
 import at.tigraine.podcatcher2.R;
 import at.tigraine.podcatcher2.database.PodcastDatabase;
 import at.tigraine.podcatcher2.factory.ObjectFactory;
@@ -36,7 +37,7 @@ public class AddPodcastActivity extends Activity {
     }
 	
 	private void addPodcast() {
-		Log.d(MainActivity.LOG_TAG, "Finished Adding Podcast");
+		Log.d(Constants.LOG_TAG, "Finished Adding Podcast");
 		PodcastDatabase db = ObjectFactory.instance().createDatabase(getApplicationContext());
 		db.addPodcast(((EditText)findViewById(R.id.podcast_uri)).getText().toString());
 		this.setResult(Activity.RESULT_OK);

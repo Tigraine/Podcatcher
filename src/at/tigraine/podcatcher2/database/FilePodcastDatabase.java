@@ -8,6 +8,7 @@ import java.util.List;
 
 import android.content.Context;
 import android.widget.Toast;
+import at.tigraine.podcatcher2.database.exceptions.DatabaseException;
 import at.tigraine.podcatcher2.models.Podcast;
 
 public class FilePodcastDatabase implements PodcastDatabase {
@@ -44,7 +45,7 @@ public class FilePodcastDatabase implements PodcastDatabase {
 	private Podcast deserialize(String line) {
 		String[] values = line.split(",");
 		String name = values[0];
-		return new Podcast(name);
+		return new Podcast(1, name);
 	}
 
 	@Override
@@ -52,4 +53,11 @@ public class FilePodcastDatabase implements PodcastDatabase {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public Podcast getById(int id) throws DatabaseException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
