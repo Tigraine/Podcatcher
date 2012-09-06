@@ -4,5 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">Podcatcher</string>
-
+    <string name="title_add_podcast">Subscribe to Podcast</string>
+	<string name="menu_add_podcast">Add Podcast</string>
+	<string name="done">Done</string>
 </resources>

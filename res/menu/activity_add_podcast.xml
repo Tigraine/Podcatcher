@@ -3,8 +3,8 @@
         android:title="@string/menu_settings"
         android:orderInCategory="100"
         android:showAsAction="never" />
-    <item android:id="@+id/menu_add_podcast"
-        android:title="@string/menu_add_podcast"
+    <item android:id="@+id/menu_add_podcast_done"
+        android:title="@string/done"
         android:orderInCategory="101"
         android:showAsAction="ifRoom|withText" />
 </menu>

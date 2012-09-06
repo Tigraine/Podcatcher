@@ -37,7 +37,7 @@ public class FilePodcastDatabase implements PodcastDatabase {
 			fileReader.close();
 			
 		} catch (IOException ex) {
-			Toast.makeText(context, "Something went wrong reading the Podcast List", Toast.LENGTH_LONG);
+			Toast.makeText(context, "Something went wrong reading the Podcast List", Toast.LENGTH_LONG).show();
 		}
 	}
 	
@@ -45,5 +45,11 @@ public class FilePodcastDatabase implements PodcastDatabase {
 		String[] values = line.split(",");
 		String name = values[0];
 		return new Podcast(name);
+	}
+
+	@Override
+	public void addPodcast(String uri) {
+		// TODO Auto-generated method stub
+		
 	}
 }

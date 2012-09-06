@@ -14,26 +14,27 @@ import android.widget.TextView;
 import at.tigraine.podcatcher2.R;
 import at.tigraine.podcatcher2.R.id;
 import at.tigraine.podcatcher2.R.layout;
+import at.tigraine.podcatcher2.database.PodcastDatabase;
 import at.tigraine.podcatcher2.models.Podcast;
 
 public class ImageAdapter extends BaseAdapter {
 	
 	private Context context;
-	private List<Podcast> podcasts;
+	private PodcastDatabase database;
 	
-	public ImageAdapter(Context context, List<Podcast> podcasts) {
+	public ImageAdapter(Context context, PodcastDatabase database) {
 		this.context = context;
-		this.podcasts = podcasts;
+		this.database = database;
 	}
 	
 	@Override
 	public int getCount() {
-		return podcasts.size();
+		return database.getPodcasts().size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		return podcasts.get(position);
+		return database.getPodcasts().get(position);
 	}
 
 	@Override
