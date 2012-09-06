@@ -11,11 +11,10 @@ import at.tigraine.podcatcher2.models.Podcast;
 public class FakePodcastDatabase implements PodcastDatabase {
 
 	private static ArrayList<Podcast> podcasts = new ArrayList<Podcast>(){{
-		add(new Podcast(1, "Omega Tau"));
-		add(new Podcast(2, "Hanselminutes"));
-		add(new Podcast(3, "This Developers Life"));
-		add(new Podcast(4, "Ruby Rogues"));
-		add(new Podcast(5, "WRINT"));
+		add(new Podcast(1, "Omega Tau", "http://omegataupodcast.net/category/podcast/feed"));
+		add(new Podcast(2, "Hanselminutes", "http://feeds.feedburner.com/Hanselminutes"));
+		add(new Podcast(3, "This Developers Life", "http://feeds.feedburner.com/thisdeveloperslife"));
+		add(new Podcast(4, "Ruby Rogues", "http://rubyrogues.com/feed/"));
 	}};
 	
 	public FakePodcastDatabase(Context context) {
@@ -30,7 +29,7 @@ public class FakePodcastDatabase implements PodcastDatabase {
 
 	@Override
 	public void addPodcast(String uri) {
-		podcasts.add(new Podcast(podcasts.size(), "Hello World"));
+		podcasts.add(new Podcast(podcasts.size(), "Hello World", uri));
 	}
 
 	@Override
