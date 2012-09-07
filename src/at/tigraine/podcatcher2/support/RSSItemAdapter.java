@@ -55,10 +55,10 @@ public class RSSItemAdapter extends BaseAdapter {
 		
 		RSSItem item = (RSSItem)getItem(position);
 		
-		Log.d(Constants.LOG_TAG, "Content: " + item.getContent());
+		/*Log.d(Constants.LOG_TAG, "Content: " + item.getContent());
 		Log.d(Constants.LOG_TAG, "Description: " + item.getDescription());
 		Log.d(Constants.LOG_TAG, "Link: " + item.getLink());
-		Log.d(Constants.LOG_TAG, "PubDate: " + item.getPubDate());
+		Log.d(Constants.LOG_TAG, "PubDate: " + item.getPubDate());*/
 		
 		((TextView)view.findViewById(R.id.rss_item_title)).setText(item.getTitle());
 		((TextView)view.findViewById(R.id.rss_item_description)).setText(Html.fromHtml(item.getDescription()));

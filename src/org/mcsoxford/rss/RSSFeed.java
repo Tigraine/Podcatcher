@@ -24,6 +24,7 @@ package org.mcsoxford.rss;
 public class RSSFeed extends RSSBase {
 
   private final java.util.List<RSSItem> items;
+  private String image = null;
 
   RSSFeed() {
     super(/* initial capacity for category names */ (byte) 3);
@@ -39,6 +40,13 @@ public class RSSFeed extends RSSBase {
 
   void addItem(RSSItem item) {
     items.add(item);
+  }
+	
+  public void setImage(String image) {
+	this.image = image;	
+  }
+  public String getImage() {
+	return image;
   }
 
 }

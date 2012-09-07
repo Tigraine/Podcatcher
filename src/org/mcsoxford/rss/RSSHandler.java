@@ -16,6 +16,8 @@
 
 package org.mcsoxford.rss;
 
+import org.xml.sax.Attributes;
+
 /**
  * Internal SAX handler to efficiently parse RSS feeds. Only a single thread
  * must use this SAX handler.
@@ -131,6 +133,17 @@ class RSSHandler extends org.xml.sax.helpers.DefaultHandler {
         item.setContent(content);
       }
     }
+  };
+  
+  private final Setter SET_IMAGE = new AttributeSetter() {
+	private static final String ITUNES_IMAGE = "href";
+	@Override
+	public void set(Attributes attributes) {
+		if (item == null) {
+	    	final String image = MediaAttributes.stringValue(attributes, ITUNES_IMAGE);
+	        feed.setImage(image);
+	      }
+	}
   };
 
   /**
@@ -262,6 +275,7 @@ class RSSHandler extends org.xml.sax.helpers.DefaultHandler {
     setters.put("pubDate", SET_PUBDATE);
     setters.put("media:thumbnail", ADD_MEDIA_THUMBNAIL);
     setters.put("enclosure", SET_ENCLOSURE);
+    setters.put("itunes:image", SET_IMAGE);
   }
 
   /**
