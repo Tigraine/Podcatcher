@@ -4,13 +4,10 @@ import org.mcsoxford.rss.RSSItem;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.TextView;
 import at.tigraine.podcatcher2.Constants;
 import at.tigraine.podcatcher2.R;
 import at.tigraine.podcatcher2.database.PodcastDatabase;
@@ -70,10 +67,6 @@ public class ShowEpisodeActivity extends Activity {
 				}
 			}
 		});
-	}
-	
-	private void setTextViewText(int resource, String text) {
-		((TextView)findViewById(resource)).setText(text);
 	}
 
 }

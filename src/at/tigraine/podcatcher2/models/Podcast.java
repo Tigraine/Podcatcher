@@ -12,7 +12,6 @@ import at.tigraine.podcatcher2.support.DownloadAndParseRSS;
 public class Podcast {
 	private String name;
 	private int id;
-	private String rssUrl = "http://omegataupodcast.net/category/podcast/feed/";
 	private String feedUri;
 	private RSSFeed feed;
 	

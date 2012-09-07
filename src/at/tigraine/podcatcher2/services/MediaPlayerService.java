@@ -5,14 +5,11 @@ import java.io.IOException;
 import android.app.IntentService;
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.os.Binder;
-import android.os.IBinder;
 import android.util.Log;
 import at.tigraine.podcatcher2.Constants;
 
 public class MediaPlayerService extends IntentService {
 
-	private static boolean isPlaying = false;
 	private static MediaPlayer mediaPlayer = null;
 	private static String currentEnclosureUrl = null;
 	

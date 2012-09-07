@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
         ListView gridview = (ListView) findViewById(R.id.podcast_grid);
         gridview.setAdapter(adapter);
         gridview.setOnItemClickListener(new OnItemClickListener() {
-        	public void onItemClick(AdapterView parent, View v, int position, long id) {
+        	public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
         		Podcast item = (Podcast)adapter.getItem(position);
         		Intent intent = new Intent(MainActivity.this, PodcastDetailActivity.class);
         		intent.putExtra(Constants.PODCAST_ID, item.getId());
