@@ -30,10 +30,7 @@ public class MediaPlayerService extends IntentService {
 				mediaPlayer = new MediaPlayer();
 			}
 			String requestedEnclosureUrl = intent.getStringExtra(Constants.ENCLOSURE_URL);
-			if (currentEnclosureUrl != null) {
-				Log.d(Constants.LOG_TAG, "currentEnclosure.equals(requestedEnclosureUrl):" + currentEnclosureUrl.equals(requestedEnclosureUrl));
-			}
-			if (currentEnclosureUrl == null || currentEnclosureUrl.equals(requestedEnclosureUrl)) {
+			if (currentEnclosureUrl == null || !currentEnclosureUrl.equals(requestedEnclosureUrl)) {
 				Log.d(Constants.LOG_TAG, "MediaPlayer resetting because of new URL");
 				
 				mediaPlayer.reset();
