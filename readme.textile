@@ -1,0 +1,12 @@
+h1. Podcatcher
+
+Written by Daniel Hoelbling (http://www.tigraine.at) as a Project for Klagenfurt University
+It is intented as a simple starting project to get to know the Android SDK and will never reach production quality. 
+
+If you want to extend this or use portions of it to write your own Podcatcher go ahead. Just don't complain afterwards to me if things break. The code is very very very prototypical.
+
+h2. License
+
+This Application is open source and licensed under the MIT License.
+www.opensource.org/licenses/MIT
+
