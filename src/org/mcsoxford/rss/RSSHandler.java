@@ -186,6 +186,24 @@ class RSSHandler extends org.xml.sax.helpers.DefaultHandler {
       }
     }
   };
+  
+  private final Setter SET_ENCLOSURE = new AttributeSetter() {
+	private static final String ENCLOSURE_URL = "url";
+	@Override
+	public void set(org.xml.sax.Attributes attributes) {
+		if (item == null) {
+			//ignore enclosures outside of item elements
+			return;
+		}
+		
+		final String url = MediaAttributes.stringValue(attributes, ENCLOSURE_URL);
+		if (url == null) {
+			return;
+		}
+		item.setEnclosure(url);
+	}
+	
+  };
 
   /**
    * Setter for one or multiple RSS &lt;media:thumbnail&gt; elements inside an
@@ -243,6 +261,7 @@ class RSSHandler extends org.xml.sax.helpers.DefaultHandler {
     setters.put("category", ADD_CATEGORY);
     setters.put("pubDate", SET_PUBDATE);
     setters.put("media:thumbnail", ADD_MEDIA_THUMBNAIL);
+    setters.put("enclosure", SET_ENCLOSURE);
   }
 
   /**

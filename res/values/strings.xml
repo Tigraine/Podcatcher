@@ -8,4 +8,6 @@
 	<string name="menu_add_podcast">Add Podcast</string>
 	<string name="done">Done</string>
 	<string name="image_of_podcast">Image of Podcast</string>
+	<string name="play_episode">Play Episode</string>
+	<string name="pause">Pause</string>
 </resources>

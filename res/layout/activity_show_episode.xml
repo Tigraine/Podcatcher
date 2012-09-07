@@ -5,10 +5,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
+    <Button
+        android:id="@+id/play_episode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/play_episode" />
+    
     <WebView
         android:id="@+id/episode_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:scrollbars="vertical|none"
+         />
 
 </LinearLayout>
